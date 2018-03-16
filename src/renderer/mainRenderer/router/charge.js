@@ -5,5 +5,5 @@ let routers = [{
     default: require('@/components/charge/center-content').default,
     right: require('@/components/charge/right-content').default
   }
-}];
-module.exports = routers;
+}]
+module.exports = routers

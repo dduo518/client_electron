@@ -5,5 +5,5 @@ let routers = [{
     default: require('@/components/inventory/center-content').default,
     right: require('@/components/inventory/right-content').default
   }
-}];
-module.exports = routers;
+}]
+module.exports = routers

@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-let electron = require('electron')
 import IPC from './../../../ipcCfg'
 import modules from './modules'
+
+let electron = require('electron')
 
 Vue.use(Vuex)
 let store = new Vuex.Store({

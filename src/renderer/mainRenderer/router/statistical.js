@@ -33,5 +33,5 @@ let routers = [{
             default: require('@/components/statistical/awaitDeal').default
         }
     }]
-}];
-module.exports = routers;
+}]
+module.exports = routers

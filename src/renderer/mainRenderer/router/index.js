@@ -18,7 +18,7 @@ let routers = [
     path: '*',
     redirect: '/'
   }
-];
+]
 routers.push(...statistical)
 routers.push(...charge)
 routers.push(...person)

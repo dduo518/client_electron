@@ -42,6 +42,7 @@
 <script>
   import '../../assets/base.css'
   import loginFrom from './loginFrom'
+  import api from './../../axios/api.js'
   import axios from 'axios'
   // import md5 from 'js-md5'
   export default {
@@ -70,16 +71,12 @@
         }
         this.isLogin = !this.isLogin
         if (this.isLogin) {
-          var url = this.$api.url + this.$api.auth + this.$api.version + this.$api.router + '/login'
-          axios({
-            method: 'post',
-            url: url,
-            data: {
+          api.login('/login',{
               username: this.account,
               password: this.password, // md5(this.password),
               type: 1
-            }
           }).then(data => {
+            console.log(data)
             if (data.data && data.data.success) {
               this.$electron.ipcRenderer.send(this.$_IPC.LOGIN, {
                 user: data.data.data,
@@ -100,7 +97,6 @@
               this.isLogin = !this.isLogin
             }
           }).catch(data => {
-            console.log(data)
             this.isLogin = !this.isLogin
           })
         }
@@ -120,7 +116,14 @@
   
       openDev () {
         console.log('aa')
-      }
+      },
+      // test mock
+      setNewsApi() {
+        api.JH_news('/news/index', 'type=top&key=123456')
+        .then(res => {
+          this.newsListShow = res.articles;
+        });
+      },
     },
     mounted () {
       this.win = this.$electron.remote.getCurrentWindow()
