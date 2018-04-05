@@ -1,14 +1,28 @@
 <template>
-        <div class="right-container">
-			<div class="right-box">
-				index
+    <div class="right-container">
+			<div class="right-box"  v-loading="loading">
+					<el-time-select
+						v-model="value1"
+						:picker-options="{
+							start: '08:30',
+							step: '00:15',
+							end: '18:30'
+						}"
+						placeholder="选择时间">
+					</el-time-select>
 			</div>
 		</div>
 </template>
 
 <script>
     export default {
-    
+			 data () {
+        return {
+					loading:false,
+					value1: ''
+        }
+			},
+			// before
     }
 </script>
 
@@ -19,7 +33,7 @@
 .content .right-container{
     width: 100%;
     height: 100%;
-    padding: 20px 20px 20px 262px;
+    padding: 0px;
 }
 
 .content .right-container .container-nav{

@@ -1,8 +1,8 @@
 <template>
-        <div class="right-container">
+    <div class="right-container">
 			<div class="right-box">
 				setting
-			</div>
+		</div>
 		</div>
 </template>
 

@@ -76,7 +76,6 @@
               password: this.password, // md5(this.password),
               type: 1
           }).then(data => {
-            console.log(data)
             if (data.data && data.data.success) {
               this.$electron.ipcRenderer.send(this.$_IPC.LOGIN, {
                 user: data.data.data,

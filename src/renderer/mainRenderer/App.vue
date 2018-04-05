@@ -19,7 +19,9 @@
       contents
     },
     mounted () {
-      this.$store.dispatch('GET_USER_INFO')
+      this.$store.dispatch('GET_APP_CACHE').then(data=>{
+        this.$store.commit('GET_APP_CACHE',data);
+      })
     }
   }
 </script>

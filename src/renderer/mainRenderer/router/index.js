@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import statistical from './statistical'
+import subject from './subject'
 import charge from './charge'
-import person from './person'
-import inventory from './inventory'
+import student from './student'
+import teacher from './teacher'
 import setting from './setting'
 import wechat from './wechat'
 Vue.use(Router)
@@ -13,18 +13,24 @@ let routers = [
     name: 'index',
     components: {
       default: require('@/components/index/center-content').default
+    },
+    meta: {
+      keepAlive: true // 不需要缓存
     }
   }, {
     path: '*',
     redirect: '/'
   }
 ]
-routers.push(...statistical)
+routers.push(...subject)
 routers.push(...charge)
-routers.push(...person)
+routers.push(...student)
 routers.push(...setting)
 routers.push(...wechat)
-routers.push(...inventory)
-export default new Router({
+routers.push(...teacher)
+
+const router = new Router({
   routes: routers
 })
+
+export default router

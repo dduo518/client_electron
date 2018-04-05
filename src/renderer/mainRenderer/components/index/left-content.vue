@@ -2,45 +2,45 @@
         <!-- 左边列表 -->
 	<div class="nav">
 		<ul>
-			<li v-for="(relation,index) in relations" class="oli" v-bind:class="{active:nowId==relation.id}"  @click='changeView($event,relation)' >
-				<span class="navIcon"  v-bind:class="relation.id"></span><a href="#">{{relation.text}}</a>
+			<li v-for="(relation,index) in relations" class="oli" v-bind:class="{active:nowId==relation.id}" @click='changeView($event,relation)'>
+				<!-- <router-link  :to="relation.id"> -->
+					<span class="navIcon"  v-bind:class="relation.class"></span><a >{{relation.text}}</a>
+				<!-- </router-link> -->
 			</li>
 		</ul>
 	</div>	
 </template>
 <script>
-    export default {
+export default {
       	data () {
     return {
-          nowId: 'order',
+          nowId: 'index',
           relations: [
-            {text: '首页', id: 'order'},
-            {text: '课程', id: 'statistical'},
-            {text: '学生', id: 'person'},
-            {text: '教师', id: 'inventory'},
-            {text: '微信', id: 'wechat'},
-            {text: '收费', id: 'charge'},
-            {text: '设置', id: 'setting'}
+            {text: '首页', id: 'index',class:'order'},
+						{text: '课程', id: 'subject',class:'statistical'},
+            {text: '学生', id: 'student',class:'person'},
+            {text: '教师', id: 'teacher',class:'inventory'},
+            {text: '微信', id: 'wechat',class:'wechat'},
+            {text: '收费', id: 'charge',class:'charge'},
+            {text: '设置', id: 'setting',class:'setting'}
           ]
     }
   },
   methods: {
     changeView (ev, relation) {
-		  this.nowId = relation.id
-          this.$router.push({ path: relation.id })
+			this.nowId = relation.id
+			var go = { name: relation.id }
+			this.$router.push(go);
     }
   },
   mounted () {
 
   }
-    }
+}
 </script>
 
 <style scoped>
  .nav{
-	position: absolute;
-	top: 0;
-    padding-bottom: 95px;
 	height: 100%;
 	width: 54px;
 	z-index: 3;

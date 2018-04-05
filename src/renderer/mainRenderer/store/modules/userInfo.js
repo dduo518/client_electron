@@ -5,8 +5,7 @@ const state = {
 
 const mutations = {
   // 启动获取用户信息
-  GET_USER_INFO (state) {
-    var userInfo = this.$electron.ipcRenderer.sendSync(this.$IPC.GETUSERINFO)
+  GET_USER_INFO (state, userInfo) {
     state.userInfo = userInfo.user
     state.access_token = userInfo.access_token
   }
@@ -14,7 +13,8 @@ const mutations = {
 
 const actions = {
   GET_USER_INFO ({ commit }) {
-    commit('GET_USER_INFO')
+    var userInfo = this.$electron.ipcRenderer.sendSync(this.$IPC.GETUSERINFO)
+    commit('GET_USER_INFO', userInfo)
   }
 }
 

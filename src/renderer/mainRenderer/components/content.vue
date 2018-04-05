@@ -2,8 +2,10 @@
 			<!-- 中间内容 -->
 			<div class="no-drag content">
 				<left-content></left-content>	
-				<div style="height:100%;">
-					<router-view></router-view>
+				<div style="height:100%;width: -webkit-calc(100% - (54px));">
+					<keep-alive>
+						<router-view></router-view>
+					</keep-alive>
 					<router-view name="right"></router-view>
 				</div>
 			</div> 
@@ -12,18 +14,16 @@
 import leftContent from './index/left-content'
 export default {
   name: 'contents',
-   	components: {leftContent}
+  components: {leftContent}
 }
 </script>
 
 <style>
 .content{
-	height: 100%;
+	height: -webkit-calc(100% - (97px));
 	width:100%;
-	position: absolute;
 	background: #ffffff;
 	box-sizing: border-box;
-	padding-bottom: 95px;
-	top:45px;
+	display: flex;
 }
 </style>

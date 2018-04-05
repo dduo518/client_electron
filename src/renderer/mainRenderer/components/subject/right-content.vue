@@ -1,25 +1,23 @@
 <template>
-        <div class="right-container">
-			<div class="right-box">
-				proson
-			</div>
+    <div class="right-container">
+			<router-view name='childSubject'></router-view>
 		</div>
 </template>
 
 <script>
     export default {
-    
+		name:'rightContainer'
     }
 </script>
 
-<style scoped>
+<style>
 /*********************
 * 内容区布局
 *********************/
 .content .right-container{
     width: 100%;
     height: 100%;
-    padding: 20px 20px 20px 262px;
+    padding: 20px 20px 20px 214px;
 }
 
 .content .right-container .container-nav{

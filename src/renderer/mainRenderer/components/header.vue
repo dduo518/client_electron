@@ -22,7 +22,7 @@
       },
       computed: {
         name () {
-          return this.$store.state.Counter.userInfo.username
+          return this.$store.state.userInfo.userInfo.username
         }
       },
       methods: {
@@ -52,11 +52,11 @@
 
 <style>
 .header{
-    position: absolute;
-    width: 100%;
-    z-index: 10;
-    color:#F1F2F2;
-    -webkit-app-region:drag;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  color:#F1F2F2;
+  -webkit-app-region:drag;
 	background: #084677;
 }
 .header .titleIcon{

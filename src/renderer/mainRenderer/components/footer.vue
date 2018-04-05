@@ -15,13 +15,13 @@
 
 <script>
     export default {
-      data () {
-    return {
-          title: 'XX',
-          desc: '琴行管理系统',
-          ad: '嘻嘻嘻'
-    }
-  }
+        data () {
+			return {
+				title: 'XX',
+				desc: '琴行管理系统',
+				ad: '嘻嘻嘻'
+			}
+		}
     }
 </script>
 
@@ -38,6 +38,7 @@
 	font-size:12px;
     color: rgb(126,183,216);
     z-index: 4;
+	-webkit-app-region: no-drag;
 }
 .footer .footerIcon{
 	float: left;

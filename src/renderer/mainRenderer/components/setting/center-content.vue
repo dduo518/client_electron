@@ -1,66 +1,6 @@
 <template>
-    <div class="listbox">
-		<div class="patient" style="display:block;">
-			<span class="listHeader">{{title}}
-			    <span class="add"></span>
-			</span>
-			<div class="list">
-						<div class="listCon">
-							<input class="search1" type="text" name="search1">
-							<span class="iconSear"></span>
-									<div class="listTipSe">
-									<span class="listTip">今日学生</span>
-									<span class="listTip listTipAct">全部学生</span></div>
-									<div class="zselect">
-										<span class="selected">按姓名字母排序</span>
-									    <ul class="ulList"> 
-									       <li class="onSelected">按姓名字母排序</li>
-									       <li>按预约时间排序</li>
-									       <li>按更新时间排序</li>
-									    </ul>
-									</div> 
-						</div>
-						<div class="personList">
-							<ul>
-								<li>
-									<span class="imgBar"><img src="./../../assets/img/icon/IMG-1.png"></span>
-									<span class="nameBar">陈奕迅</span>
-									<span class="time">昨天 16:00</span>
-								</li>
-								<li>
-									<span class="imgBar"><img src="./../../assets/img/icon/IMG-2.png"></span>
-									<span class="nameBar">王思聪</span>
-									<span class="time">昨天 16:00</span>
-								</li>
-								<li>
-									<span class="imgBar"><img src="./../../assets/img/icon/IMG-3.png"></span>
-									<span class="nameBar">陈冠希</span>
-									<span class="time">昨天 16:00</span>
-								</li>
-								<li>
-									<span class="imgBar"><img src="./../../assets/img/icon/IMG-4.png"></span>
-									<span class="nameBar">刘德华</span>
-									<span class="time">昨天 16:00</span>
-								</li>
-								<li>
-									<span class="imgBar"><img src="./../../assets/img/icon/IMG-5.png"></span>
-									<span class="nameBar">刘亦菲</span>
-									<span class="time">昨天 16:00</span>
-								</li>
-								<li>
-									<span class="imgBar"><img src="./../../assets/img/icon/IMG-6.png"></span>
-									<span class="nameBar">有点二</span>
-									<span class="time">昨天 16:00</span>
-								</li>
-								<li>
-									<span class="imgBar"><img src="./../../assets/img/icon/IMG-6.png"></span>
-									<span class="nameBar">习大大</span>
-									<span class="time">昨天 16:00</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+  <div class="listbox">
+		setting
 	</div>
 </template>
 
